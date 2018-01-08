@@ -1,5 +1,5 @@
 properties([parameters([
-    string(name: 'Bucket_Name', defaultValue: 'ravijenkins')
+    string(name: 'Bucket_Name', defaultValue: 'ravijenkins'),
     string(name: 'Bucket_Name2', defaultValue: 'ravikanthjenkins')
 ])])
 pipeline {
