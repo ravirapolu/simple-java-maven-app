@@ -1,11 +1,11 @@
 properties(
     [
         parameters(
-        [
-    string(name: 'Bucket_Name', defaultValue: 'ravijenkins'),
-    string(name: 'Bucket_Name2', defaultValue: 'ravikanthjenkins')
-]
-    )
+             [
+                        string(name: 'Bucket_Name', defaultValue: 'ravijenkins'),
+                    string(name: 'Bucket_Name2', defaultValue: 'ravikanthjenkins')
+             ]
+        )
     ]
 )
 pipeline {
@@ -20,7 +20,6 @@ pipeline {
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
-        }
             post {
                 success  {
                     emailext  (
