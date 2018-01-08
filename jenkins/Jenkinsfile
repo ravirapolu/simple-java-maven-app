@@ -60,12 +60,12 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
-        stage('Store-in-S3') {
+        stage('Store-in-S3 bucket1') {
             steps {
                 sh "aws s3 cp /var/lib/jenkins/workspace/btree/target/my-app-1.0-SNAPSHOT.jar s3://${params.Bucket_Name}/"
             }
         }
-    stage('Store-in-S3') {
+    stage('Store-in-S3 bucket2') {
             steps {
                 sh "aws s3 cp /var/lib/jenkins/workspace/btree/target/my-app-1.0-SNAPSHOT.jar s3://${params.Bucket_Name2}/"
             }
